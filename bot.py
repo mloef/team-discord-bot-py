@@ -12,18 +12,18 @@ async def on_ready():
     print(bot.user.id)
     print('------')
 
-@bot.command(pass_context=True)
+@bot.command()
 async def greet(ctx):
     await ctx.send(":smiley: :wave: Hello, there!")
 
-@bot.command(pass_context=True)
+@bot.command()
 async def teams(ctx):
     players = []
     team1 = []
     team2 = []
     
     for channel in ctx.guild.channels:
-        if isinstance(channel, "VoiceChannel"):
+        if isinstance(channel, discord.VoiceChannel):
             players += members
             
     for player in players:
