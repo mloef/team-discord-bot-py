@@ -34,11 +34,9 @@ async def teams(ctx):
             
     while abs(len(team1) - len(team2)) > 1:
         if len(team1) > len(team2):
-            team1.pop()
-            team2.append()
+            team2.append(team1.pop())
         else:
-            team2.pop()
-            team1.append()
+            team1.append(team2.pop())
             
     message = "Team 1: "
     for player in team1:
