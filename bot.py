@@ -32,7 +32,7 @@ async def teams(ctx):
         else:
             team2 += player
             
-    while abs(len(team1) - len(team2)) 1:
+    while abs(len(team1) - len(team2)) > 1:
         if len(team1) > len(team2):
             team1.pop()
             team2.push()
