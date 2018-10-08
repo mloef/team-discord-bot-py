@@ -12,11 +12,11 @@ async def on_ready():
     print(bot.user.id)
     print('------')
 
-@bot.command()
+@bot.command(pass_context=True)
 async def greet(ctx):
     await ctx.send(":smiley: :wave: Hello, there!")
 
-@bot.command()
+@bot.command(pass_context=True)
 async def teams(ctx):
     players = []
     team1 = []
