@@ -28,17 +28,17 @@ async def teams(ctx):
             
     for player in players:
         if random.random() < 0.5:
-            team1 += player
+            team1.append(player)
         else:
-            team2 += player
+            team2.append(player)
             
     while abs(len(team1) - len(team2)) > 1:
         if len(team1) > len(team2):
             team1.pop()
-            team2.push()
+            team2.append()
         else:
             team2.pop()
-            team1.push()
+            team1.append()
             
     message = "Team 1: "
     for player in team1:
