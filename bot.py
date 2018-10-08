@@ -24,7 +24,7 @@ async def teams(ctx):
     
     for channel in ctx.guild.channels:
         if isinstance(channel, discord.VoiceChannel):
-            players += members
+            players += channel.members
             
     for player in players:
         if random.random() < 0.5:
