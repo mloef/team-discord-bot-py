@@ -12,7 +12,7 @@ async def on_ready():
     print('------')
 
 @bot.command(pass_context=True)
-async def $greet(ctx):
+async def greet(ctx):
     await ctx.send(":smiley: :wave: Hello, there!")
 
 bot.run(os.environ['BOT_TOKEN'])
