@@ -22,7 +22,7 @@ async def teams(ctx):
     team1 = []
     team2 = []
     
-    for channel ctx.guild.channels:
+    for channel in ctx.guild.channels:
         if isinstance(channel, "VoiceChannel"):
             players += members
             
