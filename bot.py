@@ -38,6 +38,6 @@ async def teams(ctx, channelID=None):
     message += "\nTeam 2: "
     message += ", ".join(team2)
         
-    await ctx.send(message)
+    await ctx.send(message, tts=True)
     
 bot.run(os.environ['BOT_TOKEN'])
