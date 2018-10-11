@@ -22,9 +22,9 @@ async def teams(ctx, channelID=None):
             
     for player in players:
         if random.random() < 0.5:
-            team1.append(player.display_name)
+            team1.append(player.name)
         else:
-            team2.append(player.display_name)
+            team2.append(player.name)
             
     while abs(len(team1) - len(team2)) > 1: #balance teams
         if len(team1) > len(team2):
